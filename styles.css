@@ -1,0 +1,63 @@
+/* Simple responsive stylesheet for DES Tech */
+:root{
+  --accent:#0b78d1;
+  --accent-2:#0b5fa6;
+  --bg:#f7f9fc;
+  --text:#0f1720;
+  --muted:#55606b;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; color:var(--text); background:var(--bg); line-height:1.5}
+.container{max-width:1080px;margin:0 auto;padding:24px}
+.site-header{background:white;box-shadow:0 1px 6px rgba(15,23,32,0.06);position:sticky;top:0;z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:8px;object-fit:cover}
+.tag{margin:0;color:var(--muted);font-size:13px}
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;padding:8px 6px;border-radius:6px;font-weight:600}
+.nav a.cta{background:var(--accent);color:white;padding:8px 12px}
+.menu-toggle{display:none;background:none;border:0;font-size:20px;padding:8px}
+
+.hero{padding:48px 0;background:linear-gradient(180deg,white, #f6fbff);border-bottom:1px solid rgba(15,23,32,0.03)}
+.hero-inner{display:flex;gap:32px;align-items:center}
+.hero-text{flex:1}
+.hero-text h2{font-size:32px;margin:0 0 12px}
+.lead{color:var(--muted);margin-top:6px;margin-bottom:18px}
+.hero-image img{width:320px;max-width:40vw}
+
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);margin-left:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(11,120,209,0.04)}
+
+.section{padding:48px 0}
+.band{background:white;border-top:1px solid rgba(15,23,32,0.03)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:18px}
+.product{background:var(--card);padding:14px;border-radius:10px;text-align:center}
+.product img{width:100%;height:120px;object-fit:contain}
+.price{font-weight:800;margin-top:8px}
+.small-btn{display:inline-block;margin-top:8px;padding:8px 10px;border-radius:8px;border:1px solid rgba(15,23,32,0.06);text-decoration:none;font-weight:700}
+
+.academy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.academy-card{background:linear-gradient(180deg,#ffffff,#f8fbff);padding:16px;border-radius:10px}
+
+.bullets{margin-top:12px}
+.bullets li{margin:6px 0;color:var(--muted)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.contact-form label{display:block;margin-bottom:8px;font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,32,0.06);margin-top:6px}
+
+.site-footer{padding:20px 0;background:#ffffff;border-top:1px solid rgba(15,23,32,0.03)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+/* Responsive */
+@media(max-width:860px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-image img{max-width:60%}
+  .nav{display:none}
+  .menu-toggle{display:block}
+  .contact-grid{grid-template-columns:1fr}
+}
